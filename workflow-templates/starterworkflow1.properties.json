@@ -1,0 +1,8 @@
+{
+    "name": "Starter Workflow #1",
+    "description": "MSFT-LED Organization Starter Workflow #1.",
+    "iconName": "example-icon",
+    "filePatterns": [
+        "package.json$",
+        ".*\\.md$"
+    

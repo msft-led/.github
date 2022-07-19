@@ -16,11 +16,11 @@ jobs:
     name: Create GitHub Repository 
     steps:
       - run: |
-            mkdir "${{ inputs.project-name }}"
-            cd "${{ inputs.project-name }}""
+            mkdir '${{ inputs.project-name }}'
+            cd '${{ inputs.project-name }}'
             git init
             echo "# New Project Repository" >> README.md
-            git add '.''
+            git add .
             git commit -m "Provision Repository"
         shell: bash
 

@@ -19,7 +19,8 @@ jobs:
             mkdir "${{ inputs.project-name }}"
             cd "${{ inputs.project-name }}""
             git init
-            git add .
+            echo "# New Project Repository" >> README.md
+            git add '.''
             git commit -m "Provision Repository"
         shell: bash
 

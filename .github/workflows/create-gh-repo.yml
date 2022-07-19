@@ -18,6 +18,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Create GitHub Repository 
     steps:
+      - run: gh api -H "Accept: application/vnd.github+json" /orgs/MSFT-LED/repos
+
       - run: |
             mkdir '${{ inputs.project-name }}'
             cd '${{ inputs.project-name }}'

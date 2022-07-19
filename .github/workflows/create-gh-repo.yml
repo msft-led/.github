@@ -15,9 +15,14 @@ jobs:
     runs-on: ubuntu-latest
     name: Create GitHub Repository 
     steps:
-      - run: gh repo create msft-led/$PROJECTNAME
+      - run: 
+            mkdir ${{ inputs.project-name }}
+            cd ${{ inputs.project-name }}
+            git init
+            git add .
+            git commit -m "Provision Repository"
+
+      - run: gh repo create --private
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PROJECTNAME: ${{ inputs.project-name }}
-          PROJECTTEAMNAME: ${{ inputs.project-team-name }}
           

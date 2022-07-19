@@ -15,9 +15,9 @@ jobs:
     runs-on: ubuntu-latest
     name: Create GitHub Repository 
     steps:
-      - run: gh repo create $PROJECT-NAME --team $PROJECT-TEAM-NAME --private --disable-wiki 
+      - run: gh repo create $PROJECTNAME --team $PROJECTTEAMNAME --private --disable-wiki 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PROJECT-NAME: ${{ inputs.project-name }}
-          PROJECT-TEAM-NAME: ${{ inputs.project-team-name }}
+          PROJECTNAME: ${{ inputs.project-name }}
+          PROJECTTEAMNAME: ${{ inputs.project-team-name }}
           

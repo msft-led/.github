@@ -18,6 +18,7 @@ jobs:
       - run: |
             mkdir '${{ inputs.project-name }}'
             cd '${{ inputs.project-name }}'
+            git config --global init.defaultBranch main
             git init
             echo "# New Project Repository" >> README.md
             git add .

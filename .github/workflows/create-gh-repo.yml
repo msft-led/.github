@@ -9,7 +9,10 @@ on:
       project-team-name:
         required: true
         type: string
-
+permissions:
+  repository-projects: write
+  contents: write
+  
 jobs:
   create-gh-repo:
     runs-on: ubuntu-latest

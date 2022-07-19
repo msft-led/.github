@@ -7,7 +7,7 @@ on:
         description: 'What is the name of the new project?'
         required: true
         type: string
-        default: "New Dev Project 1"
+        default: "New-Dev-Project-1"
       project-team-name:
         description: 'What is the name of the project team?'
         required: true

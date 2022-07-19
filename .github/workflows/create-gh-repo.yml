@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Create GitHub Repository 
     steps:
-      - run: gh repo create $PROJECTNAME --team $PROJECTTEAMNAME --private --disable-wiki 
+      - run: gh repo create msft-led/$PROJECTNAME
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PROJECTNAME: ${{ inputs.project-name }}

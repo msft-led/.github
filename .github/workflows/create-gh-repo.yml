@@ -32,5 +32,5 @@ jobs:
 
       - run: gh repo create '$PROJECTNAME' --private
         env:
-          GH_TOKEN: ${{ secrets.ORG_ADMIN_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PROJECTNAME: ${{ inputs.project-name }}

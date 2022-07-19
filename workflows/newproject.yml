@@ -1,0 +1,28 @@
+name: Provision New P&G Project
+
+on:
+  workflow_dispatch:
+    project-name:
+      description: 'What is the name of the new project?'
+      required: true
+      type: string
+      default: "New Dev Project ${{ github.event.repository.updated_at}}"
+    project-team-name:
+      description: 'What is the name of the project team?'
+      required: true
+      type: choice
+      options:
+      - DataTeam
+      - AppTeam
+      - BizTeam
+      - Management
+      default: 'DataTeam'
+
+jobs:
+  create-gh-repo:
+    uses: ./.github/workflows/create-gh-repo.yml
+    with:
+      project-name: ${{ github.event.inputs.project-name }}
+      project-team-name: ${{ github.event.inputs.project-team-name }}
+
+      

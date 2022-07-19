@@ -19,6 +19,8 @@ jobs:
             mkdir '${{ inputs.project-name }}'
             cd '${{ inputs.project-name }}'
             git config --global init.defaultBranch main
+            git config --global user.email "repobot@contoso.com"
+            git config --global user.name "Repo Bot"
             git init
             echo "# New Project Repository" >> README.md
             git add .
